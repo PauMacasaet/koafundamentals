@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block title %}Grades{% endblock %}
+
+{% block content %}
+  <h1>Grades</h1>
+  <p>You have <strong>{{ grades.length }}</strong> grades!</p>
+  <p><a href="/post/new">Enter your grade</a></p>
+  <ul id="grades">
+    {% for post in grades %}
+      <li>
+        <h2><strong>{{ post.subject }}</strong></h2>
+        <h4>{{ post.grade }}</h4>
+        <p><a href="/post/{{ post.id }}">View grade</a></p>
+        <p><a href="/post/edit/{{ post.id }}">Edit</a></p>
+        <p><a href="/post/delete/{{ post.id }}">Delete</a></p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

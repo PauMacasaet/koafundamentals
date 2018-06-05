@@ -1,0 +1,17 @@
+{
+  "name": "grades",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-body": "^2.5.0",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "koa-views": "^6.1.4",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
+  }
+}

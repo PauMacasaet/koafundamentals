@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}Edit Post{% endblock %}
+
+{% block content %}
+  <h1>Edit Post</h1>
+  <p>Edit your post.</p>
+  <form action="/edit" method="edit">
+    <p><input type="text" placeholder="letter mark" name="subject"></p>
+    
+    <p>
+      <select name="grade">
+        {{ post.grade }}
+        <option value="A">A</option>
+        <option value="B+">B+</option>
+        <option value="B">B</option>
+        <option value="C+">C+</option>
+        <option value="C">C</option>
+        <option value="F">F</option>
+      </select>
+    </p>
+    <p><textarea placeholder="Remarks" name="remarks"></textarea></p>
+    <p><input type="submit" value="Enter"></p>
+  </form>
+{% endblock %}
